@@ -1,19 +1,21 @@
-name: Print environment variable
+name: Print Android Signing Key
 
 on:
-  workflow_call:
-    inputs:
-      upload-artifact:
-        type: boolean
-        default: true
-      upload-tag:
-        type: string
-        default: "nightly"
-
-
+  push:
+    branches:
+      - main
 env:
   ANDROID_SIGNING_KEY: '${{ secrets.ANDROID_SIGNING_KEY }}'
-  
-  
-run: echo FUCK
-#run: echo ${{ env.ANDROID_SIGNING_KEY }}
+
+
+jobs:
+  print-signing-key:
+    runs-on: ubuntu-latest
+
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Print Android Signing Key
+      run: echo "ANDROID_SIGNING_KEY"
