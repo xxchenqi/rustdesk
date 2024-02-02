@@ -2,14 +2,16 @@ name: Full Fuck CI
 
 on:
   workflow_dispatch:
-  pull_request:
-    paths-ignore:
-    - "docs/**"
-    - "README.md"
-
 
 jobs:
-  run-ci:
+  # run-ci:
+  #   uses: ./.github/workflows/flutter-fuck2.yml
+  #   with:
+  #     upload-artifact: false
+
+  run-flutter-tag-build:
     uses: ./.github/workflows/flutter-fuck2.yml
+    secrets: inherit
     with:
-      upload-artifact: false
+      upload-artifact: true
+      upload-tag: ${{ env.GITHUB_REF_NAME }}
