@@ -14,4 +14,3 @@ jobs:
     secrets: inherit
     with:
       upload-artifact: true
-      upload-tag: ${{ env.GITHUB_REF_NAME }}
