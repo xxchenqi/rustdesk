@@ -1,0 +1,20 @@
+name: Print Android Signing Key
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  print-signing-key:
+    runs-on: ubuntu-latest
+
+    env:
+      ANDROID_SIGNING_KEY: ${{ secrets.ANDROID_SIGNING_KEY }}
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Print Android Signing Key
+      run: echo "ANDROID_SIGNING_KEY: $ANDROID_SIGNING_KEY"
