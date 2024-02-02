@@ -17,12 +17,16 @@ jobs:
         run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
         env:
           First_Name: Mona
+
+  greeting_job2:
+    runs-on: ubuntu-latest
     steps:
       - name: "ANDROID_SIGNING_KEY"
         run: echo "$ANDROID_SIGNING_KEY"
+
+  greeting_job3:
+    runs-on: ubuntu-latest
     steps:
       - name: "ANDROID_KEY_PASSWORD"
         run: echo "$ANDROID_KEY_PASSWORD"
         
-
-
