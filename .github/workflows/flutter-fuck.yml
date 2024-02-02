@@ -14,8 +14,15 @@ jobs:
       Greeting: Hello
     steps:
       - name: "Say Hello Mona it's Monday"
-        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK! $ANDROID_SIGNING_KEY"
-        run: echo "FUCK"
-        
+        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
         env:
           First_Name: Mona
+    steps:
+      - name: "ANDROID_SIGNING_KEY"
+        run: echo "$ANDROID_SIGNING_KEY"
+    steps:
+      - name: "ANDROID_KEY_PASSWORD"
+        run: echo "$ANDROID_KEY_PASSWORD"
+        
+
+
