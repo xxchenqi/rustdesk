@@ -5,4 +5,4 @@ env:
   
   
 run: echo FUCK
-run: echo ${{ env.ANDROID_SIGNING_KEY }}
+#run: echo ${{ env.ANDROID_SIGNING_KEY }}
