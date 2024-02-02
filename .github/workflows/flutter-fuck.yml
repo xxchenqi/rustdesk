@@ -38,6 +38,14 @@ jobs:
         if: env.ANDROID_SIGNING_KEY != null
         run: echo "${{ secrets.ANDROID_SIGNING_KEY }}"
 
+  greeting_job5:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "ANDROID_SIGNING_KEY"
+        if: env.ANDROID_SIGNING_KEY == null
+        run: echo "${{ secrets.ANDROID_SIGNING_KEY }}"
+
+        
   # greeting_job4:
   #   runs-on: ubuntu-latest
   #   steps:
