@@ -30,6 +30,13 @@ jobs:
       - name: "ANDROID_KEY_PASSWORD"
         run: echo "$ANDROID_KEY_PASSWORD"
         
+
+  greeting_job4:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "ANDROID_SIGNING_KEY"
+        run: echo "${{ secrets.ANDROID_SIGNING_KEY }}"
+
   # greeting_job4:
   #   runs-on: ubuntu-latest
   #   steps:
