@@ -1,4 +1,4 @@
-name: Full Flutter CI
+name: Full Fuck CI
 
 on:
   workflow_dispatch:
